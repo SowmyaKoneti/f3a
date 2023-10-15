@@ -10,7 +10,7 @@ export const App = () => (
     {/* Navbar */}
     <Navbar>
       <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
+      <Link to="/about">Team Availability</Link>
     </Navbar>
 
     {/* Pages */}
