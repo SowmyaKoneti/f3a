@@ -1,45 +1,33 @@
-.Home {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+.About {
+  height: 100%;
   padding: 2rem;
-  background: linear-gradient(to bottom, #0079bf, #005785);
-  background-image: url('https://images.squarespace-cdn.com/content/v1/6528415c9932cb0fc29c3b32/7fe159da-c6ef-455e-8a4b-297df97697dc/IMG6665544827173519927.jpg?format=1000w');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
+  background: linear-gradient(to bottom, #0079bf, #005785); /* Gradient background with shades of blue */
+  color: #ffffff; /* Text color */
   text-align: center;
 
-  & > img {
-    display: none;
+  & > .cards-list {
+    display: flex;
+    flex-flow: row wrap; /* Arrange cards in rows */
+    gap: 1rem;
+    justify-content: center; /* Center-align cards horizontally */
+    max-width: 100%; /* Expand the card container */
+    margin: auto;
   }
 
-  button {
-    width: 2rem;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 4px;
-    background: rgb(184, 215, 255);
-    color: #333;
-    font-size: 1.1rem;
-  }
+  /* Style individual cards */
+  .Card {
+    width: calc(33.33% - 1rem); /* Adjust card width based on the number of cards in a row */
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem; /* Rounded corners */
+    background: #ffffff; /* Card background color */
+    color: #333333; /* Card text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Card shadow */
+    text-align: center;
+    transition: transform 0.2s; /* Add a smooth hover effect */
 
-  /* Style for the text */
-  .title {
-    margin-top: 2rem;
-    font-size: 2.5rem;
-  }
-
-  .description {
-    align-self: top; /* Align the description to the top */
-    margin-top: 2rem;
-    font-size: 1.5rem;
-  }
-
-  .madeBy {
-    font-size: 1rem;
+    &:hover {
+      transform: scale(1.05); /* Scale up on hover */
+    }
   }
 }
