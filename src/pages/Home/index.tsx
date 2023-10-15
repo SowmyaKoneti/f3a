@@ -1,10 +1,9 @@
 import * as React from 'react';
-import logo from '@/assets/logo.svg';
+import { Link } from 'react-router-dom';
 import styles from '@/pages/Home/Home.module.scss';
 import { fetchUser, type UserFetchResponse } from '@/services/userService';
 
 export const Home = () => {
-  const [count, setCount] = React.useState(0);
   const [userData, setUserData] = React.useState<UserFetchResponse | undefined>();
 
   React.useEffect(() => {
@@ -13,21 +12,12 @@ export const Home = () => {
 
   return (
     <div className={styles.Home}>
-      <img src={logo} alt="logo" />
-      <h1 style={{ margin: 0 }}>React + Vite + TypeScript</h1>
-      <h3>Hello, {userData?.name ?? 'guest'}!</h3>
-      <h3>
-        Counter: {count}
-        <button onClick={() => setCount(x => x + 1)} style={{ margin: '0.25rem' }}>
-          +
-        </button>
-        <button onClick={() => setCount(x => x - 1)} style={{ margin: '0.25rem' }}>
-          -
-        </button>
-      </h3>
-      <br />
-      <br />
-      made by qeleb
+      <h1 className={styles.title}>Fragrant Foul Football Association</h1>
+      <h2 className={styles.description}>Hello, Captain!!!</h2>
+      <h2 className={styles.description}>
+        Head over to the team availability section to know the availability of your respective players
+      </h2>
+      <p className={styles.description}>Made by Rising Billikens</p>
     </div>
   );
 };
