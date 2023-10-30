@@ -1,24 +1,59 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Temp/cache
+.eslintcache
+
 # Logs
 logs
 *.log
+
+# Node/NPM
+node_modules
+.npm
+.node_repl_history
 npm-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+*.tgz
+
+# yarn
+.yarn-integrity
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
-node_modules
+# Vite
+/vite.config.ts.timestamp-*
+
+# Dist
 dist
-dist-ssr
-*.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
+# Coverage
+coverage
+*.lcov
+lib-cov
+.nyc_output
+
+# Environment
+*.local
+/secrets.json
+
+# Thunder Client
+thunder-tests/thunderEnvironment.json
+
+# Other
 .idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.project
+.classpath
+*.launch
+.settings
+*.sublime-workspace
+.history

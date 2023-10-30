@@ -12,6 +12,9 @@ export default ({ mode }: { mode: 'production' | 'development' | 'test' }) => {
   const ENV = { ...process.env, ...loadEnv(mode, 'env', '') };
 
   return defineConfig({
+    optimizeDeps: {
+      exclude: ['pg-hstore'], // Specify the external dependency
+    },
     build: {
       rollupOptions: { output: { entryFileNames: '[hash:6].js', chunkFileNames: '[hash:6].js', assetFileNames: '[hash:6][extname]' } }, //prettier-ignore
       target: 'es2020',
