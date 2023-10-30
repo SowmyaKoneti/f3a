@@ -1,33 +1,17 @@
 .About {
   height: 100%;
   padding: 2rem;
-  background: linear-gradient(to bottom, #0079bf, #005785); /* Gradient background with shades of blue */
-  color: #ffffff; /* Text color */
+  background: dimgray;
+  color: white;
   text-align: center;
 
   & > .cards-list {
     display: flex;
-    flex-flow: row wrap; /* Arrange cards in rows */
+    flex-flow: column;
     gap: 1rem;
-    justify-content: center; /* Center-align cards horizontally */
-    max-width: 100%; /* Expand the card container */
+    align-content: center;
+    width: 100%;
+    max-width: 70rem;
     margin: auto;
-  }
-
-  /* Style individual cards */
-  .Card {
-    width: calc(33.33% - 1rem); /* Adjust card width based on the number of cards in a row */
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 0.5rem; /* Rounded corners */
-    background: #ffffff; /* Card background color */
-    color: #333333; /* Card text color */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Card shadow */
-    text-align: center;
-    transition: transform 0.2s; /* Add a smooth hover effect */
-
-    &:hover {
-      transform: scale(1.05); /* Scale up on hover */
-    }
   }
 }
